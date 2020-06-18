@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { FaNetworkWired } from 'react-icons/fa'
+import LogoutButton from '../src/components/LogoutButton'
+import LoginPage from './components/loginForm/Login'
 
-function App() {
+import './App.css'
+import WorkFlow from './components/workflow/Workflow'
+
+function App () {
+  const [loggedIn, setLoggedIn] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='App-header'>
+        <FaNetworkWired style={{ padding: '4px 4px 0px 0px' }} />
+        <span> Flow App </span>
+        {loggedIn ? <LogoutButton setLoggedIn={setLoggedIn} /> : null}
+      </div>
+      <div className='App-body'>
+        {loggedIn ? <WorkFlow /> : <LoginPage setLoggedIn={setLoggedIn} />}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

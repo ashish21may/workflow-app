@@ -1,0 +1,59 @@
+.workflow-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.workflow-header {
+  display:  flex;
+  justify-content: start;
+  align-items: center;
+  margin: 24px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.workflow-search {
+  width: 300px;
+  height: 40px;
+  margin: inherit;
+  border-radius: 5px;
+}
+
+.input-group.mb-3 {
+  max-width: 200px;
+  margin: inherit;
+  height: 40px;
+  font-size: 16px;
+}
+
+.workflow-create {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: auto;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+}
+
+.workflow-body {
+  display: flex;
+  margin: 24px;
+  flex: 9;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: inherit;
+  max-width: 300px;
+}
+
+.card-title {
+  width: -webkit-fill-available;
+}
+
+a.btn {
+  margin: 16px;
+}
